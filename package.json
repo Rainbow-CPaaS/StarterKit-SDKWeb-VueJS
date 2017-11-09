@@ -1,0 +1,40 @@
+{
+  "name": "rainbow-web-sdk-vuejs",
+  "description": "Vue.js + Brunch Starter-Kit for the Alcatel-Lucent Enterprise Rainbow SDK for Web",
+  "private": true,
+  "author": "Virtualis <info@virtualis.it> (http://wwww.virtualis.it)",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": "",
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "keywords": [
+    "ALE",
+    "SDK",
+    "Rainbow",
+    "vue",
+    "vuejs"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "jquery": "^2.1.3",
+    "moment": "^2.15.1",
+    "rainbow-web-sdk": "^1.30.1",
+    "vue": "^2.4.4"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "babel-brunch": "^6.0.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6",
+    "brunch": "^2",
+    "clean-css-brunch": "^2",
+    "copycat": "0.0.0",
+    "copycat-brunch": "^1.1.0",
+    "uglify-js-brunch": "^2",
+    "vue-brunch": "^2.0.1"
+  }
+}
