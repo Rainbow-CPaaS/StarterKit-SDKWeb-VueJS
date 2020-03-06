@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-	"copy": "cp ./node_modules/rainbow-web-sdk/src/vendors-sdk.min.js ./public/"
+    "copy": "cp ./node_modules/rainbow-web-sdk/src/vendors-sdk.min.js ./public/"
   },
   "dependencies": {
     "core-js": "^3.6.4",
