@@ -1,32 +1,41 @@
-# Starter-Kit of Rainbow SDK for Web with Brunch + Vue.js + Babel/ES6
+# Rainbow Web SDK Vue.js Starter Kit
 
-This is a modern JS skeleton with Vue.js for [Brunch](http://brunch.io).
-
+Welcome to Rainbow Web SDK Vue.js Starter Kit. The goal of this project is to set up the most basic project allowing you to quickly get your **Vue.js** application up and running - with all the Rainbow functionalities right here for the taking. 
 
 ## Installation
 
-Clone this repo manually
+Clone this repo, then navigate to the project's folder and run:
 
+```shell
+npm install
+```
 
-## Getting started
+Once the installation is done, run:
 
-* Install (if you don't have them):
-    * [Node.js](http://nodejs.org): `brew install node` on OS X
-    * [Brunch](http://brunch.io): `npm install -g brunch`
-    * Rainbow SDK for Web and Brunch plugins and app dependencies: `npm install`
-* Run:
-    * `npm start` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
-    * `npm run build` — builds minified project for production
-* Learn:
-    * `public/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
-    * Place static files you want to be copied from `app/assets/` to `public/`.
-    * [Brunch site](http://brunch.io), [Getting started guide](https://github.com/brunch/brunch-guide#readme)
+```shell
+npm run copy
+```
 
+or
 
-## Special thanks
+```shell
+cp ./node_modules/rainbow-web-sdk/src/vendors-sdk.min.js ./public/
+```
+## Start development server
 
-Special thanks to [Virtualis](http://www.virtualis.it/) who develops this Starter-Kit.
+```
+npm run serve
+```
 
-For more information or to contact Virtualis, you can send an email to that [address](info@virtualis.it).
+### Compiles and minifies for production
+```
+npm run build
+```
 
-![Virtualis](./assets/VirtualisLogo.jpg)
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

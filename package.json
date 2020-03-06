@@ -1,40 +1,43 @@
 {
-  "name": "rainbow-web-sdk-vuejs",
-  "description": "Vue.js + Brunch Starter-Kit for the Alcatel-Lucent Enterprise Rainbow SDK for Web",
+  "name": "vue-starter",
+  "version": "0.1.0",
   "private": true,
-  "author": "Virtualis <info@virtualis.it> (http://wwww.virtualis.it)",
-  "version": "0.0.1",
-  "license": "MIT",
-  "repository": "",
   "scripts": {
-    "start": "brunch watch --server",
-    "build": "brunch build --production"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+	"copy": "cp ./node_modules/rainbow-web-sdk/src/vendors-sdk.min.js ./public/"
   },
-  "keywords": [
-    "ALE",
-    "SDK",
-    "Rainbow",
-    "vue",
-    "vuejs"
-  ],
   "dependencies": {
-    "angular": "^1.5.7",
-    "jquery": "^3.3.1",
-    "moment": "^2.15.1",
-    "rainbow-web-sdk": "^1.40.0",
-    "vue": "^2.4.4"
+    "core-js": "^3.6.4",
+    "rainbow-web-sdk": "^1.68.0",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "auto-reload-brunch": "^2",
-    "babel-brunch": "^6.0.6",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-latest": "^6",
-    "brunch": "^2",
-    "clean-css-brunch": "^2",
-    "copycat": "0.0.0",
-    "copycat-brunch": "^1.1.0",
-    "uglify-js-brunch": "^2",
-    "vue-brunch": "^2.0.1"
-  }
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
