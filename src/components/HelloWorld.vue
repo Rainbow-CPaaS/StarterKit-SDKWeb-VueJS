@@ -1,39 +1,45 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-	<h2>Rainbow Web SDK v{{ version }}</h2>
+    <h2>Rainbow Web SDK {{ version }}</h2>
   </div>
 </template>
 
 <script>
-import rainbowSDK from 'rainbow-web-sdk';
-
+import rainbowSDK from "rainbow-web-sdk";
 
 var onReady = function onReady() {
-    console.log('[Hello World] :: On SDK Ready !');
-	rainbowSDK.connection.signin('loginEmail', 'password').then(user => {
-		return user
-	}).catch(err => { 
-		console.log(err) 
-	})
+  console.log("[Hello World] :: On SDK Ready !");
+  // UNCOMMENT TO USE THE LOGIN FUNCTION
+
+  // rainbowSDK.connection
+  //   .signin("loginEmail", "password")
+  //   .then(user => {
+  //     return user;
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //   });
 };
 
 var onLoaded = function onLoaded() {
-    console.log('[Hello World] :: On SDK Loaded !');
+  console.log("[Hello World] :: On SDK Loaded !");
+  let appId = "PUT YOUR APP ID HERE";
+  let appSecret = "PUT YOUR APP SECRET HERE";
 
-    rainbowSDK
-        .initialize('appId', 'appSecret')
-        .then(() => {
-            console.log('[Hello World] :: Rainbow SDK is initialized!');
-        })
-        .catch(err => {
-            console.log('[Hello World] :: Something went wrong with the SDK.', err);
-        });
+  rainbowSDK
+    .initialize(appId, appSecret)
+    .then(() => {
+      console.log("[Hello World] :: Rainbow SDK is initialized!");
+    })
+    .catch(err => {
+      console.log("[Hello World] :: Something went wrong with the SDK.", err);
+    });
 };
 /* Listen to the SDK event RAINBOW_ONREADY */
-document.addEventListener(rainbowSDK.RAINBOW_ONREADY, onReady)
+document.addEventListener(rainbowSDK.RAINBOW_ONREADY, onReady);
 /* Listen to the SDK event RAINBOW_ONLOADED */
-document.addEventListener(rainbowSDK.RAINBOW_ONLOADED, onLoaded)
+document.addEventListener(rainbowSDK.RAINBOW_ONLOADED, onLoaded);
 /* Load the SDK */
 rainbowSDK.load();
 
@@ -43,9 +49,9 @@ export default {
     msg: String
   },
   data() {
-	return {
-	  version: rainbowSDK.version()
-	}
+    return {
+      version: rainbowSDK.version()
+    };
   }
 };
 </script>

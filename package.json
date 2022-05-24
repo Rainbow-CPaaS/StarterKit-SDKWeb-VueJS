@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.9.1",
-    "rainbow-web-sdk": "^1.84.0",
+    "rainbow-web-sdk": "3.0.1-lts",
     "vue": "^2.6.12"
   },
   "devDependencies": {
